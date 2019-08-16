@@ -1,0 +1,497 @@
+
+
+<!-- exported styles -->
+
+
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/tb-mod/??tb-bianmin-wt/0.1.1/index.css"/>
+
+
+
+
+  
+      
+  <!--region -->
+            
+                
+                <div data-spm="128695" data-moduleid="74594" data-name="tb-bianmin-wt" data-guid="128695" id="guid-128695" data-scene-id="151765" data-scene-version="1" data-hidden="" data-gitgroup="tb-mod" data-ext="" data-engine="tce" class="tb-bianmin-wt J_Module" tms="tb-bianmin-wt/0.1.1" tms-datakey="tce/151765"><!--
+
+调试内容,上线请删除
+调试时,在下面 .module-wrap 加入  conve-bd-box J_Conve 两个 class
+
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/??tb/global/3.5.28/global-min.css,tb-page/tbindex/1.2.44/index-min.css">
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/tb/conve/0.1.2/common-min.css" />
+<link rel="stylesheet" href="//g.alicdn.com/tcc/traffic/1.1.8/page/tb-home-conve-traffic.css" />
+<link rel="stylesheet" href="//g.alicdn.com/tcc/traffic/6.0.6/widget/ContactSuggest.css"/>
+<link rel="stylesheet" href="//g.alicdn.com/wt/cz/1.2.2/c/css/conve.css" />
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/tcc/tbr/6.0.7/tbr/common.css" />
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/tcc/tbr/6.0.7/tbr/widget/phone/phone.css" />
+-->
+
+
+
+
+<div class="module-wrap">
+    <div class="conve-container" data-spm="754870889">
+        <div id="J-recharge-main" class="recharge-tab">
+            <div class="conve-tabs">
+                <a href="javascript:;" class="J-conve-title" target="_self">充话费</a>
+                <a href="javascript:;" class="J-conve-title" target="_self">充流量</a>
+                <a href="javascript:;" class="J-conve-title" target="_self">充固话</a>
+                <a href="javascript:;" class="J-conve-title" target="_self">充宽带</a>
+            </div>
+            <div class="recharge-tab-body">
+                <!--话费充值部分开始-->
+                <div id="tbr-phone" class="conve-box J_conveCont" data-ts="20130517">
+                    <div class="conve-control-group" id="tbr-phone-number">
+                        <div class="conve-input">
+                            <label class="conve-label" for="tbr-phone-number-input">号码</label>
+                            <div class="conve-combox" style="position:relative; ">
+                                <input class="conve-large-width" id="tbr-phone-number-input" type="tel" placeholder="请输入手机号码" data-label="充值号码" autocomplete="off" data-paste="disabled" />
+                                <span class="conve-icon conve-icon-phone" title="点击查看充值历史"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conve-control-group" id="tbr-phone-denom">
+                        <div class="conve-input" id="">
+                            <label class="conve-label" for="tbr-select-denom">面值</label>
+                            <div class="conve-combox">
+                                <input id="tbr-select-denom" type="text" class="conve-large-width">
+                                <s class="conve-icon conve-icon-arrows"></s>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbr-block tbr-result conve-control-group" style="height:auto; zoom:1;" id="J_TbrPhonePrice">
+                        <div class="tbr-block-hd">售价</div>
+                        <div class="tbr-block-bd"><span class="tbr-price"><span>￥</span><strong>49-49.8</strong></span>
+                        </div>
+                        <div class="tbr-block-rt j-box-thf" style="display:none;">
+                            <input type="checkbox" id="J_CheckUseThf" checked="checked">
+                            <label for="J_CheckUseThf" class=".j-label-thf">可用淘话费抵扣</label>
+                            <span class="tbr-price j-box-price"><span>￥</span><strong class=".j-price"></strong></span>
+                        </div>
+                    </div>
+                    <div class="tbr-block tbr-buy">
+                        <a href="#tbr-phone" target="_blank" class="tbr-btn tbr-btn-buy conve-btn" data-spm-click="gostr=/tbindex;locaid=d1">立即充值</a>
+                        <a href="#" target="_blank" class="tbr-link" style="display:none"><span class="tbr-price">-</span></a>
+                    </div>
+                    <form class="tbr-form-buy" method="post" target="_blank" action="//buy.taobao.com/auction/buy_now.htm">
+                        <input type="hidden" name="tccdetailc" value="fp_2012" />
+                        <input type="hidden" name="from" value="tcc" />
+                        <input type="hidden" name="event_submit_do_buy" value="1" />
+                        <input type="hidden" name="action" value="buynow/PhoneEcardBuyNowAction" />
+                        <input type="hidden" name="item_id_num" value="" />
+                        <input type="hidden" name="phone" value="" />
+                        <input type="hidden" name="useTaohuafee" value="1" />
+                    </form>
+                </div>
+                <!--话费充值部分结束-->
+                <!--流量充值部分开始-->
+                <div id="tbr-traffic" class="conve-box J_conveCont" style="display:none;">
+                    <div>
+                    <textarea class="J-conve-lazy" tabindex="-1">
+                        <div id="chongzhi-traffic" class="J_conveCont" style="position: relative;">
+    <div class="conve-control-group">
+        <div class="conve-input J-phone-ctn">
+            <label class="conve-label" for="_traffict_phone">号码</label>
+            <div class="conve-combox" style="position:relative;">
+                <input type="text" id="_traffict_phone" class="conve-large-width J-phone" placeholder="请输入手机号码"/>
+                <s class="conve-icon conve-icon-phone J-contact-icon"></s>
+            </div>
+        </div>
+        <div class="input-right-tips J-right-tips" style="display:none;">
+            <!--<i class="icon passed"></i>-->
+            <span class="J-isp-name J-right-tips-txt"></span>
+        </div>
+    </div>
+    <div class="conve-control-group conve-denom">
+        <div class="conve-input J-type-ctn">
+            <label class="conve-label" for="_traffic_face_value">流量</label>
+            <div class="conve-combox">
+                <input type="text" style="width: 71px;" class="conve-small-width J-type"/>
+                <s class="conve-icon conve-icon-arrows"></s>
+            </div>
+        </div><div class="conve-input J-face-value-ctn" style="margin-left:0px; border-left: 0 none;">
+        <div class="conve-combox">
+            <input type="text" id="_traffic_face_value" class="conve-small-width J-face-value" style=" width: 70px;"/>
+            <s class="conve-icon conve-icon-arrows"></s>
+        </div>
+    </div>
+        <div class="input-right-tips">
+            <div class="conve-cz-pop-container">
+                <span class="j-help-traffic-trigger" style="color:#29AEFE">详情</span>
+                <div class="conve-cz-pop-container J_TrafficPopCtr hide">
+                    <span class="help-msg traffic-help">
+                        本地流量：流量只能在号码所属省份使用(即时生效，当月有效)；<br/>
+                        全国流量：流量可在全国使用(即时生效，当月有效)；
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tbr-result tbr-block J-info">
+        <span class="J-price-info">
+            <span class="conve-price-hd"> 售价 </span>
+            <span class="conve-price-bd">
+                <em>￥</em><span class="J-price"> 49-49.8 </span>
+            </span>
+        </span>
+        <span class="conve-loading J-loading" style="display:none;">正在查询, 请稍等</span>
+        <a class="conve-tips J-error" style="display:none;" href="javascript:;">
+            缺货, 点击搜索其他数量
+        </a>
+    </div>
+    <div class="conve-control-group">
+        <input type="submit" value="立即充值" class="conve-btn J-submit" data-spm-click="gostr=/tbindex;locaid=d2"/>
+        <a href="//wt.tmall.com" class="conve-link" style="display:none;">充流量，上网厅</a>
+    </div>
+    <form class="J-traffic-form" method="post" target="_blank" action="//buy.taobao.com/auction/buy_now.htm">
+        <input name="action" type="hidden" value="buynow/EcardFCTccBuyNowAction"/>
+        <input name="event_submit_do_buy" type="hidden" value="1"/>
+        <input name="item_id_num" type="hidden"/>
+        <input name="mobile" type="hidden"/>
+        <input name="tccdetail" type="hidden" value='tb_bmzx'/>
+    </form>
+</div>
+<script>
+(function(){
+
+    KISSY.config({
+        packages: [
+            {
+                path : '//g.alicdn.com/tcc/traffic/6.0.6/',
+                ignorePackageNameInUri:true,
+                name : 'traffic',
+                charset: 'utf-8',
+                combine: true,
+                debug: false
+            }
+        ]
+    });
+
+    var cfg = { container : '#chongzhi-traffic' };
+
+    var TRAFFIC_TYPE_ALL = '全国流量';
+    var TRAFFIC_TYPE_LOCAL = '本地流量';
+
+    //选项管理开始
+    cfg.ispConfig = [];
+
+    cfg.ispConfig.push( (cfg.ispConfig["defualt"] = {
+        applyTo: 'defualt',
+        options: 'for_default',
+        selectType : TRAFFIC_TYPE_ALL,
+        selectFaceValue : '300M'
+    }));
+    cfg.ispConfig.push( (cfg.ispConfig["电信: *"] = {
+        applyTo: '电信: *',
+        options: 'tele_comman',
+        selectType : TRAFFIC_TYPE_ALL,
+        selectFaceValue : '300M'
+    }));
+    cfg.ispConfig.push( (cfg.ispConfig["联通: 浙江"] = {
+        applyTo: '联通: 浙江',
+        options: 'unicom_zj',
+        selectType : TRAFFIC_TYPE_LOCAL,
+        selectFaceValue : '100M'
+    }));
+
+    //选项管理结束
+
+    //下拉列表管理
+    cfg.options = {};
+
+    if(!cfg.options["tele_comman"]) { cfg.options["tele_comman"] = []; }
+    cfg.options["tele_comman"].push({
+        name : 'tele_comman',
+        type : TRAFFIC_TYPE_ALL,
+        face : '60M',
+        min  : '9',
+        max  : '10'
+    });
+    if(!cfg.options["tele_comman"]) { cfg.options["tele_comman"] = []; }
+    cfg.options["tele_comman"].push({
+        name : 'tele_comman',
+        type : TRAFFIC_TYPE_ALL,
+        face : '150M',
+        min  : '19',
+        max  : '20'
+    });
+    if(!cfg.options["tele_comman"]) { cfg.options["tele_comman"] = []; }
+    cfg.options["tele_comman"].push({
+        name : 'tele_comman',
+        type : TRAFFIC_TYPE_ALL,
+        face : '300M',
+        min  : '29',
+        max  : '30'
+    });
+    if(!cfg.options["unicom_zj"]) { cfg.options["unicom_zj"] = []; }
+    cfg.options["unicom_zj"].push({
+        name : 'unicom_zj',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '50M',
+        min  : '9',
+        max  : '10'
+    });
+    if(!cfg.options["unicom_zj"]) { cfg.options["unicom_zj"] = []; }
+    cfg.options["unicom_zj"].push({
+        name : 'unicom_zj',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '100M',
+        min  : '19',
+        max  : '20'
+    });
+    if(!cfg.options["unicom_zj"]) { cfg.options["unicom_zj"] = []; }
+    cfg.options["unicom_zj"].push({
+        name : 'unicom_zj',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '500M',
+        min  : '49',
+        max  : '50'
+    });
+    if(!cfg.options["unicom_zj"]) { cfg.options["unicom_zj"] = []; }
+    cfg.options["unicom_zj"].push({
+        name : 'unicom_zj',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '1G',
+        min  : '79',
+        max  : '80'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_ALL,
+        face : '60M',
+        min  : '9',
+        max  : '10'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_ALL,
+        face : '150M',
+        min  : '19',
+        max  : '20'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_ALL,
+        face : '300M',
+        min  : '29',
+        max  : '30'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '50M',
+        min  : '9',
+        max  : '10'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '100M',
+        min  : '19',
+        max  : '20'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '500M',
+        min  : '49',
+        max  : '50'
+    });
+    if(!cfg.options["for_default"]) { cfg.options["for_default"] = []; }
+    cfg.options["for_default"].push({
+        name : 'for_default',
+        type : TRAFFIC_TYPE_LOCAL,
+        face : '1G',
+        min  : '79',
+        max  : '80'
+    });
+
+
+    //默认值管理开始
+
+    cfg.defaultConf = cfg.ispConfig["defualt"];
+
+    //默认值管理结束
+
+    //字典管理开始
+    cfg.idMap = {}
+
+    cfg.idMap['10M'] = '11337140';
+    cfg.idMap['20M'] = '25647293';
+    cfg.idMap['50M'] = '12970925';
+    cfg.idMap['60M'] = '13356560';
+    cfg.idMap['100M'] = '10827905';
+    cfg.idMap['150M'] = '61142456';
+    cfg.idMap['200M'] = '57475717';
+    cfg.idMap['300M'] = '3292116';
+    cfg.idMap['500M'] = '11998682';
+    cfg.idMap['1G'] = '21400';
+    cfg.idMap[TRAFFIC_TYPE_LOCAL] = '7138975';
+    cfg.idMap[TRAFFIC_TYPE_ALL] = '3272023';
+
+    //字典管理结束
+
+
+    //字典管理结束
+    KISSY.use('traffic/page/tb-home-conve-traffic', function(S, P){
+        new P(cfg);
+    });
+
+})();
+</script>
+                    </textarea>
+                    </div>
+                </div>
+                <!--流量充值部分结束-->
+                <!--固话宽带充值部分开始-->
+                <div id="J_FixlineWrap" class="conve-box J_conveCont" style="display:none;">
+                    <textarea class="J-conve-lazy" tabindex="-1">
+                        <script>
+                        KISSY.use("cz/Landline/conve/index", function(S, index) {
+                            index.init();
+                        });
+                        </script>
+                    </textarea>
+                </div>
+                <div id="J_BroadbandWrap" class="conve-box J_conveCont" style="display:none;">
+                    <textarea class="J-conve-lazy" tabindex="-1">
+                        <script>
+                        KISSY.use("cz/Broadband/conve/index", function(S, index) {
+                            index.init();
+                        });
+                        </script>
+                    </textarea>
+                </div>
+                <!--固话宽带充值部分结束-->
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    /* 便民中心部分 话费 & 网游 公用的报配置 */
+    KISSY.config({
+        packages: [{
+            combine: true,
+            debug: false,
+            name: 'tbr',
+            path: '//g.alicdn.com/tcc/tbr/6.0.8/tbr',
+            tag: '20170214',
+            ignorePackageNameInUri: true,
+            charset: "gbk"
+        },{
+            path : '//g.alicdn.com/wt/cz/6.0.1/',
+            ignorePackageNameInUri:true,
+            name : 'cz',
+            charset: 'utf-8',
+            combine:true,
+            debug: false
+        }]
+    });
+</script>
+<script>
+
+//执行第一个tab需要的js,增加是否开启新客户的开关
+window.flag = 5; //临时修复pop层bug
+window.SW_FRESHMAN = 'on';
+KISSY.use('tbr/loader, tbr/utils/monitor, node', function(S, RechargerLoader, Monitor, Node) {
+    Node.one(document.body).attr('data-spm', '1000386');
+    RechargerLoader.load('phone', 'fp', function(recharger) {
+        var containerNode = S.one('#tbr-phone'),
+            data = S.namespace('tbr.phone', S);
+
+        containerNode.show();
+        // if (data.ad2.text) {
+        //     containerNode.one('.tbr-btn-link').prop('href', data.ad2.href).html(data.ad2.text).show().on('click', function() {
+        //         Monitor.goldlog('/wanle.3.1.1', '', '1535983221');
+        //     });
+        //     containerNode.one('.tbr-link').addClass('tbr-link-cutoff');
+        // }
+        // if (data.ad1.text) {
+        //     containerNode.one('.tbr-link').prop('href', data.ad1.href).html(data.ad1.text).show();
+        // }
+        Monitor.goldlog('/wanle.10.1', '', '47700902');
+    });
+});
+
+KISSY.use('node, kg/datalazyload/2.0.0/index, kg/switchable/2.0.0/index', function(S, Node, DataLazyLoad, Switchable) {
+    var tabs = new Switchable.Tabs('#J-recharge-main', {
+        aria: true,
+        delay: 0.2,
+        switchTo: 0,
+        viewSize: [300],
+        duration: 0.2,
+        effect: 'scrollx',
+        easing: 'easeOutStrong',
+        panelCls: 'J_conveCont',
+        triggerCls: 'J-conve-title',
+        lazyTextareaClass: 'J-conve-lazy',
+        activeTriggerCls: 'conve-tabs-current'
+    });
+
+    tabs.on("beforeSwitch", function(e) {
+        var activeIndex = e.toIndex;
+
+        Node.one(this.panels[activeIndex]).style("visibility", "visible");
+    });
+
+    tabs.on("switch", function(e) {
+        var index = this.activeIndex;
+        var panel = Node.one(this.panels[index]);
+        var ctrId = panel.attr('id');
+
+        // 固话宽带tab切换隐藏对应的pop容器
+        if (ctrId == 'J_BroadbandWrap') {
+            Node.one('.J_BroadbandPopCtr') && Node.one('.J_BroadbandPopCtr').show();
+        } else {
+            Node.one('.J_BroadbandPopCtr') && Node.one('.J_BroadbandPopCtr').hide();
+        }
+
+        if (ctrId == 'J_FixlineWrap') {
+            Node.one('.J_FixlinePopCtr') && Node.one('.J_FixlinePopCtr').show();
+        } else {
+            Node.one('.J_FixlinePopCtr') && Node.one('.J_FixlinePopCtr').hide();
+        }
+
+        S.each(this.panels, function(item, i) {
+            if (i != index) {
+                Node.one(item).style("visibility", "hidden");
+            }
+        });
+        var $ = S.all;
+        if(ctrId === 'tbr-traffic') {
+            var pop = S.one('.J_TrafficPopCtr');
+            S.one('body').append(pop);
+            S.one('.j-help-traffic-trigger').on('mouseenter', function (e) {
+                var offset = S.one(this).offset()
+                pop.css({
+                    top: offset.top + 25,
+                    left: offset.left - pop.width() + 25
+                })
+                pop.show()
+            }).on('mouseleave', function (e) {
+                pop.hide()
+            });
+        }
+    });
+});
+</script>
+</div>
+            
+  <!--region -->
+      
+  
+
+<!-- exported scripts -->
+
+
+<script src="//g.alicdn.com/tb-mod/??tb-bianmin-wt/0.1.1/index.js"></script>
+
+
+

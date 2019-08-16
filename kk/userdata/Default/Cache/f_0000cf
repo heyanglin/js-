@@ -1,0 +1,319 @@
+
+
+<!-- exported styles -->
+
+
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/tb-mod/??tb-bianmin-trip/0.0.22/index.css"/>
+
+
+
+
+  
+      
+  <!--region -->
+            
+                
+                <div data-spm="124059" data-moduleid="114723" data-name="tb-bianmin-trip" data-guid="124059" id="guid-124059" data-scene-id="147462" data-scene-version="5" data-hidden="" data-gitgroup="tb-mod" data-ext="" data-engine="tce" class="tb-bianmin-trip J_Module" tms="tb-bianmin-trip/0.0.22" tms-datakey="tce/147462"><!--
+
+本地 tmsweb 调试代码
+
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/??tb/global/3.5.28/global-min.css,tb-page/tbindex/1.2.44/index-min.css">
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/??tcc/tbr/1.3.2/tbr/common.css,tb/conve/0.1.2/common-min.css">
+<link rel="stylesheet" type="text/css" href="//g.alicdn.com/tcc/tbr/1.3.4/tbr/widget/phone/phone.css">
+<link rel="stylesheet" href="//g.alicdn.com/??tcc/traffic/1.1.8/page/tb-home-conve-traffic.css,tcc/traffic/1.1.3/widget/ContactSuggest.css,wt/cz/1.2.2/c/css/conve.css" />
+调试时在下面 .module-wrap 中添加 conve-bd-box 这个 class
+
+-->
+
+
+<script>
+	KISSY.config({
+		packages:{
+			'ntrip':{
+				charset:"gbk",
+				ignorePackageNameInUri: true,
+				base:'//g.alicdn.com/trip/marketing/0.2.7/',
+				combine: false,
+				debug:false
+			}
+
+		}
+	});
+</script>
+<div class="module-wrap">
+	<div class="conve-container conve-trip" id="J_tripModule">
+		<div class="J_tripModuleContainer">
+			<!-- 导航  -->
+			<div class="conve-tabs"  role="tablist">
+				<a href="//www.fliggy.com/jipiao" target="_blank" role="tab"  class="J_switchNav conve-tabs-current">国内机票</a>
+				<a href="//www.fliggy.com/ijipiao" target="_blank" role="tab" class="J_switchNav">国际机票</a>
+				<a href="//www.fliggy.com/jiudian/" target="_blank" role="tab" class="J_switchNav">酒店客栈</a>
+				<a href="//www.fliggy.com/dujia/" target="_blank" role="tab" class="J_switchNav">度假门票</a>
+				<a href="//www.fliggy.com/huochepiao" target="_blank" role="tab" class="J_switchNav">火车票</a>
+			</div>
+			<div class="conv-trip-container">
+				<!-- 内容  -->
+				<div class="conve-box conv-trip-ne J_switchPanel J_conveCont" role="tabpanel">
+					<form method="get" target="_blank" action="//sjipiao.fliggy.com/flight_search_result.htm"  id="J_ne_form">
+						<input type="hidden" name="_input_charset" value="utf-8" class="J_tripCharsetInput" />
+						<div class="conve-control-group" id="J_neType">
+							<div class="conve-radio conve-inline">
+								<input type="radio" name="tripType" value="0" id="ne_type1" checked/>
+								<label for="ne_type1">单程</label>
+							</div>
+							<div class="conve-radio conve-inline">
+								<input type="radio" name="tripType" value="1" id="ne_type2"/>
+								<label for="ne_type2">往返</label>
+							</div>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label"  for="J_neDepCity">出发</label>
+								<div class="conve-combox">
+									<input type="text" name="depCityName" maxlength="30" autocomplete="off" id="J_neDepCity" data-autotab="J_neArrCity" data-ip="1" placeholder="城市" aria-label="城市" class="conve-small-width"/>
+									<label class="conve-icon conve-icon-place" for="J_neDepCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+								<input type="hidden" name="depCity" id="J_neDepCityCode"/>
+							</div>
+							<div class="conve-input">
+								<label class="conve-label"  for="J_neArrCity">到达</label>
+								<div class="conve-combox">
+									<input type="text" maxlength="30" class="conve-small-width" name="arrCityName" autocomplete="off" id="J_neArrCity" data-autotab="J_neDepTime"   placeholder="城市"  aria-label="城市" />
+									<label class="conve-icon conve-icon-place" for="J_neArrCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+								<input type="hidden" name="arrCity" id="J_neArrCityCode"/>
+							</div>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label"  for="J_neDepTime">出发</label>
+								<input type="text" name="depDate" class="conve-middle-width" id="J_neDepTime" autocomplete="off" data-autotab="J_neArrTime" maxlength="10"  placeholder="日期" aria-label="日期" />
+							</div>
+							<div class="conve-input">
+								<label class="conve-label"  for="J_neArrTime">返程</label>
+								<input type="text" name="arrDate" class="conve-middle-width" id="J_neArrTime" autocomplete="off" placeholder="日期" aria-label="日期"  maxlength="10" />
+							</div>
+						</div>
+						<div class="conve-control-group conve-trip-operate">
+							<input type="submit" class="conve-btn J_conveBtn" data-gold="tbtrip.15.10.1" value="查找" data-spm-click="gostr=/tbindex;locaid=d1"  />
+							
+							<a href="" target="_blank" class="conve-link"></a>
+							
+						</div>
+						<input type="hidden" name="searchBy" value="13"/>
+						<span class="conve-trip-tips">港澳台请选择国际机票</span>
+						<span class="conve-trip-go J_tripGo">去</span>
+					</form>
+				</div>
+				<div class="conve-box conv-trip-ne J_conveCont J_switchPanel" role="tabpanel">
+					<form method="get" target="_blank" action="//sijipiao.fliggy.com/ie/flight_searcher.htm"   id="J_ie_form">
+						<input type="hidden" name="_input_charset" value="utf-8" class="J_tripCharsetInput" />
+						<div class="conve-control-group" id="J_ieType">
+							<div class="conve-radio conve-inline">
+								<input type="radio" name="tripType" value="0" id="ie_type1" checked/>
+								<label for="ie_type1">单程</label>
+							</div>
+							<div class="conve-radio conve-inline">
+								<input type="radio" name="tripType" value="1" id="ie_type2"/>
+								<label for="ie_type2">往返</label>
+							</div>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label" for="J_ieDepCity">出发</label>
+								<div class="conve-combox">
+									<input type="text" name="depCityName" maxlength="30" class="conve-small-width" id="J_ieDepCity" autocomplete="off" data-autotab="J_ieArrCity" data-ip="1" placeholder="城市" aria-label="城市" />
+									<label class="conve-icon conve-icon-place" for="J_ieDepCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+								<input type="hidden" name="depCity" id="J_ieDepCityCode"/>
+							</div>
+							<div class="conve-input">
+								<label class="conve-label" for="J_ieArrCity">到达</label>
+								<div class="conve-combox">
+									<input type="text" class="conve-small-width" maxlength="30" name="arrCityName" id="J_ieArrCity" autocomplete="off"   data-autotab="J_ieDepTime"  placeholder="城市" aria-label="城市" />
+									<label class="conve-icon conve-icon-place" for="J_ieArrCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+								<input type="hidden" name="arrCity" id="J_ieArrCityCode"/>
+							</div>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label"  for="J_ieDepTime">出发</label>
+								<input type="text" name="depDate" class="conve-middle-width" id="J_ieDepTime" maxlength="10" autocomplete="off" data-autotab="J_ieArrTime" placeholder="日期" aria-label="日期" />
+							</div>
+							<div class="conve-input">
+								<label class="conve-label"  for="J_ieArrTime">返程</label>
+								<input type="text" name="arrDate" class="conve-middle-width" id="J_ieArrTime" maxlength="10" autocomplete="off" placeholder="日期" aria-label="日期" />
+							</div>
+						</div>
+						<div class="conve-control-group conve-trip-operate">
+							<input type="submit" class="conve-btn J_conveBtn"  data-gold="tbtrip.15.10.2" value="查找" data-spm-click="gostr=/tbindex;locaid=d2" />
+							
+							<a href="" target="_blank" class="conve-link"></a>
+							
+						</div>
+						<span class="conve-trip-go J_tripGo">去</span>
+						<input type="hidden" name="searchBy" value="1285"/>
+					</form>
+				</div>
+				<div class="conve-box  J_conveCont J_switchPanel" role="tabpanel">
+					<form method="get" target="_blank" id="J_hotel_form"  action="//hotel.fliggy.com/hotel_list3.htm" >
+						<input type="hidden" name="_input_charset" value="utf-8" class="J_tripCharsetInput" />
+						<div class="conve-control-group" id="J_hotelType">
+							<div class="conve-radio conve-inline">
+								<input type="radio" name="J_main" value="0" id="hotel_type1" checked/>
+								<label for="hotel_type1">国内/港澳台</label>
+							</div>
+							<div class="conve-radio conve-inline">
+								<input type="radio" name="J_main"  value="1" id="hotel_type2"/>
+								<label for="hotel_type2">海外</label>
+							</div>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label" for="J_hotelInCity">入住</label>
+								<div class="conve-combox">
+									<input type="text" name="cityName" id="J_hotelInCity" maxlength="50"  autocomplete="off" data-ip="1"  aria-label="城市" placeholder="城市" class="conve-small-width" />
+									<input name="city" type="hidden" id="J_OmniCode" class="J_OmniCode" value="">
+									<label class="conve-icon conve-icon-place" for="J_hotelInCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+							</div>
+							<input type="text" name="keywords" class="conve-input conve-large-width conve-large-width-trip" maxlength="50"  id="J_hotelInPlace"  autocomplete="off" aria-label="填写酒店或地标" placeholder="酒店/地标"/>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label" for="J_hotelInTime">入住</label>
+								<input type="text" name="checkIn" id="J_hotelInTime" autocomplete="off" maxlength="10" data-autotab="J_outTime" placeholder="日期" aria-label="日期" class="conve-middle-width"/>
+							</div>
+							<div class="conve-input">
+								<label class="conve-label" for="J_outTime">离店</label>
+								<input type="text" name="checkOut" class="conve-middle-width" id="J_outTime" autocomplete="off" maxlength="10" aria-label="日期" placeholder="日期"/>
+							</div>
+						</div>
+						<div class="conve-control-group conve-trip-operate">
+							<input type="submit" class="conve-btn J_conveBtn"  data-gold="tbtrip.15.10.3" value="搜索" data-spm-click="gostr=/tbindex;locaid=d3" />
+							
+							<a href="//www.fliggy.com/jiudian/" target="_blank" class="conve-link">五星酒店低价住</a>
+							
+						</div>
+					</form>
+				</div>
+				<div class="conve-box J_conveCont J_switchPanel" role="tabpanel">
+					<div class="conve-control-group" id="J_travelType">
+						<div class="conve-radio conve-inline">
+							<input type="radio" value="0" name="travel" id="travel_type1" checked/>
+							<label for="travel_type1">度假</label>
+						</div>
+						<div class="conve-radio conve-inline">
+							<input type="radio" value="1" name="travel" id="travel_type2"/>
+							<label for="travel_type2">门票</label>
+						</div>
+					</div>
+					<div id="J_travel" >
+						<form class="dujia-search-form" action="//s.fliggy.com/vacation/list.htm" target="_blank" method="get" id="J_dujia_form" >
+							<input type="hidden" name="_input_charset" value="utf-8" class="J_tripCharsetInput" />
+							<div class="conve-control-group">
+								<div class="conve-input">
+									<label class="conve-label" for="J_travelDepCity">出发</label>
+									<div class="conve-combox">
+										<input type="text" name="cq" id="J_travelDepCity" maxlength="50" autocomplete="off" data-autotab="J_travelArrCity" placeholder="城市"   aria-label="城市" class="conve-small-width"/>
+										<label class="conve-icon conve-icon-place" for="J_travelDepCity" aria-describedby="按ENTER弹出热门城市"></label>
+									</div>
+								</div>
+								<div class="conve-input">
+									<label class="conve-label" for="J_travelArrCity">到达</label>
+									<div class="conve-combox">
+										<input type="text" name="mq" id="J_travelArrCity" maxlength="50" autocomplete="off" placeholder="城市/景点" aria-label="城市或景点" class="conve-small-width"/>
+										<label class="conve-icon conve-icon-place" for="J_travelArrCity" aria-describedby="按ENTER弹出热门城市"></label>
+									</div>
+								</div>
+							</div>
+							<div class="conve-control-group conve-trip-operate">
+								<input type="submit" class="conve-btn J_conveBtn"  data-gold="tbtrip.15.10.4" value="搜索" data-spm-click="gostr=/tbindex;locaid=d4" />
+								
+								<a href="https://market.fliggy.com/markets/h5/jipiaobaobei?spm=181.7091613.191938.30.eqacIn" target="_blank" class="conve-link">看这里，机票团购价，旅行更划算</a>
+								
+							</div>
+						</form>
+					</div>
+					<div id="J_menpiao" class="conve-hide">
+						<form method="get" action="//s.fliggy.com/scenic/list.htm" class="" target="_blank" id="J_menpiao_form" >
+							<input type="hidden" name="_input_charset" value="utf-8" class="J_tripCharsetInput" />
+							<div class="conve-control-group">
+								<div class="conve-input">
+									<label class="conve-label" for="J_menpiaoInCity">出发</label>
+									<input type="text" name="q" id="J_menpiaoInCity" maxlength="50"  placeholder="国家/城市/景点" autocomplete="off"  aria-label="国家或城市或景点" class="conve-xlarge-width conve-trip-xxlarge-width">
+								</div>
+								<input type="submit" class="conve-btn conve-trip-btn J_conveBtn"  data-gold="tbtrip.15.10.6" value="搜索" data-spm-click="gostr=/tbindex;locaid=d5"/>
+							</div>
+							<dl class="conve-trip-suggest conve-trip-suggest-first clearfix">
+								<dt>热门服务</dt>
+								
+							</dl>
+							<dl class="conve-trip-suggest  clearfix">
+								<dt>热门城市</dt>
+								
+							</dl>
+						</form>
+					</div>
+				</div>
+				<div class="conve-box J_conveCont J_switchPanel" role="tabpanel">
+					<form method="get" target="_blank" action="//train.fliggy.com/stsSearch.htm"  id="J_train_form">
+						<input type="hidden" name="_input_charset" value="utf-8" class="J_tripCharsetInput" />
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label"  for="J_trainDepCity">出发</label>
+								<div class="conve-combox">
+									<input type="text" name="depLocation" autocomplete="off" id="J_trainDepCity" data-autotab="J_trainArrCity" data-ip="1" placeholder="城市" aria-label="城市" class="conve-small-width"/>
+									<label class="conve-icon conve-icon-place" for="J_trainDepCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+								<input type="hidden" name="depCity" id="J_trainDepCityCode"/>
+							</div>
+							<div class="conve-input">
+								<label class="conve-label"  for="J_trainArrCity">到达</label>
+								<div class="conve-combox">
+									<input type="text" class="conve-small-width" name="arrLocation" autocomplete="off" id="J_trainArrCity" data-autotab="J_trainDepTime" placeholder="城市"  aria-label="城市" />
+									<label class="conve-icon conve-icon-place" for="J_trainArrCity" aria-describedby="按ENTER弹出热门城市"></label>
+								</div>
+								<input type="hidden" name="arrCity" id="J_trainArrCityCode"/>
+							</div>
+						</div>
+						<div class="conve-control-group">
+							<div class="conve-input">
+								<label class="conve-label"  for="J_trainDepTime">出发</label>
+								<input type="text" name="depDate" class="conve-middle-width" id="J_trainDepTime" autocomplete="off" maxlength="10" placeholder="日期" aria-label="日期" />
+							</div>
+						</div>
+						<div class="conve-control-group conve-trip-operate">
+							<input type="submit" class="conve-btn J_conveBtn" data-gold="tbtrip.15.10.8" value="查找" />
+							
+							<a href="" target="_blank" class="conve-link"></a>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+KISSY.use('node, ntrip/mods/common/trip-init, ntrip/mods/ie/ie-form, ntrip/mods/hotel/hotel-form, ntrip/mods/travel/travel-form, ntrip/mods/train/train-form',
+function (S, Node, Trip, IFlight, Hotel, Travel, Train) {
+	new IFlight();
+	new Hotel();
+	new Travel();
+	new Train();
+});
+</script></div>
+            
+  <!--region -->
+      
+  
+
+<!-- exported scripts -->
+
+
+<script src="//g.alicdn.com/tb-mod/??tb-bianmin-trip/0.0.22/index.js"></script>
+
+
+
