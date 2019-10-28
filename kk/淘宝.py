@@ -246,8 +246,8 @@ class LoginTaoBao:
 
 
 if __name__ == '__main__':
-    username = 'wjheart00'
-    pwd = 'he..651349'
+    username = '*******'
+    pwd = '******'
     login = LoginTaoBao()
     loop = asyncio.get_event_loop()
     task = asyncio.ensure_future(login.main(username, pwd))
