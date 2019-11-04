@@ -16,37 +16,34 @@ with open('boss.js') as f:
 
 
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:69.0) Gecko/20100101 Firefox/69.0',
-    # 'cookie':'__zp_stoken__={}'.format(requests.utils.quote(token))
-
+    'User-Agent': "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
 }
 
-def get_token(ts, seed):
+def get_token(ts, seed,js):
     js_f = execjs.compile(jss)
-    token = js_f.call('get_token', ts, seed)
+    token = js_f.call('get_token', ts, seed,js)
     return token
 
-
-# print(resp.text)
-for i in range(50):
+for i in range(100):
     resp = requests.get(
-        'https://www.zhipin.com/job_detail/72c651d2edca0cca03d42Nq_EFM~.html?ka=search_list_1', headers=headers,
-        proxies={'http': 'https://HC5585Q01M52728P:393427EE17B0B9BF@http-pro.abuyun.com:9010'}
+        'https://www.zhipin.com/job_detail/30d92ad98a4acd891XB529u5FFM~.html?ka=search_list_1', headers=headers,
     )
     print(resp.url)
     if 'boss直聘' not in resp.text:
         ts = re.findall('ts=(.*?)&', resp.url)[0]
         seed = re.findall('seed=(.*?)&', resp.url)[0]
         seed = requests.utils.unquote(seed)
-        token = get_token(ts,seed)
+        js = requests.get('https://www.zhipin.com/web/common/security-js/{}.js'.format(re.findall('name=(.*?)&', resp.url)[0]),headers=headers,
+                          ).text
+        token = get_token(ts,seed,js)
+        print(token)
         headers1 = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:69.0) Gecko/20100101 Firefox/69.0',
+            'User-Agent':"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; AcooBrowser; .NET CLR 1.1.4322; .NET CLR 2.0.50727)",
             'cookie':'__zp_stoken__={}'.format(requests.utils.quote(token))
 
         }
         resp2 = requests.get(
-            'https://www.zhipin.com/job_detail/72c651d2edca0cca03d42Nq_EFM~.html?ka=search_list_1', headers=headers1,
-            proxies={'http': 'https://HC5585Q01M52728P:393427EE17B0B9BF@http-pro.abuyun.com:9010'}
+            'https://www.zhipin.com/job_detail/30d92ad98a4acd891XB529u5FFM~.html?ka=search_list_1', headers=headers1,
         )
         if 'BOSS直聘' in resp2.text:
             print(resp2.text)
